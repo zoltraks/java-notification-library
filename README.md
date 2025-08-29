@@ -36,7 +36,7 @@ import pl.alyx.library.notification.service.DefaultNotificationService;
 NotificationSender emailSender = new EmailSender(new EmailSenderConfig.Builder()
     .server(new MailServerConfig.Builder()
         .host("smtp.example.com")
-        .security(MailServerSecurity.TLS)
+        .security(MailServerSecurity.fromString("TLS"))
         .port(587)
         .user("username")
         .password("password")
